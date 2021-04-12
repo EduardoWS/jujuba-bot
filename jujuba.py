@@ -24,7 +24,7 @@ async def on_message(message):
     if author == 'Jujuba':
         return
     
-    elif content == 'bom dia':   #and channel.name == 'teste-linus'
+    elif content == 'bom dia':   #and channel.name == ''
         await channel.send(f'Bom dia, {mention}!!')
     
     elif content == '-jujuba':
@@ -86,10 +86,10 @@ async def on_message(message):
 
 @client.event
 async def on_member_join(member):
-    channel = client.get_channel(831000889178849313)
+    channel = client.get_channel( )
     await channel.send(f'Bem-vindo, {member.mention}!')
 
 
 
 
-client.run('ODMxMDA1NzM4MTA0NjUxNzc2.YHO8Zw.PLhXKIXrclGu3AqPGnYfu7ffqb0')
+client.run(' ')
