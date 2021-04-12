@@ -1,2 +1,2 @@
-# PRINCESA JUJUBA BOT
-## meu segundo bot para discord
+# Princesa Jujuba - Bot
+## Projeto em desenvolvimento...
