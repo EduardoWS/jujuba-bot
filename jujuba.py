@@ -1,6 +1,7 @@
 import discord
 import random
 
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -20,15 +21,18 @@ async def on_message(message):
     author = message.author.name
     mention = message.author.mention
 
+
     #previnir erro
     if author == 'Jujuba':
         return
-    
-    elif content == 'bom dia':   #and channel.name == ''
+ 
+
+    elif content == 'bom dia, jujuba':  
         await channel.send(f'Bom dia, {mention}!!')
-    
+
+    #FRASES JUJUBA:
     elif content == '-jujuba':
-        rodar = random.randint(1, 5)
+        rodar = random.randint(1, 20)
         if rodar == 1:
             await channel.send(f'As pessoas são feitas de modos diferente. \nNós não precisamos saber o porquê, apenas precisamos respeitar.')
         
@@ -43,53 +47,55 @@ async def on_message(message):
 
         elif rodar == 5:
             await channel.send(f'Você tem cheirinho de amor da minha vida :3')
-        
 
-    elif content == '-helpideia' and channel.name == '꒰🤖꒱-bots':
-        await channel.send('No canal ꒰💡꒱-ideias-desenhos digite os seguintes comandos: \n\n[ -ideia1 ] Fácil \n[ -ideia2 ] Médio \n[ -ideia3 ] Difícil')
+        elif rodar == 6:
+            await channel.send('Tem gente que é igual a nuvem... às vezes eu olho e vejo um animal')
         
+        elif rodar == 7:
+            await channel.send('Primeiramente, tô com fome. \nSegundamente, primeiramente!!')
+        elif rodar == 8:
+            await channel.send('Te amo com toda a minha barriga! \nEu ia falar coração mas minha barriga é maior.')
+        elif rodar == 9:
+            await channel.send('Nossa que dia lindo, parece eu hehehe')
+        elif rodar == 10:
+            await channel.send('Me faltou com respeito? Meus guardas irão cortar sua cabeça!! Brincadeirinha hahaha... \nou não')
+        elif rodar == 11:
+            await channel.send('Sou tão meiga quanto um tijolo')
+        elif rodar == 12:
+            await channel.send('Dica do dia: não me irrita')
+        elif rodar == 13:
+            await channel.send('É proibido comer os doces que andam!!')
+        elif rodar == 14:
+            await channel.send('As pessoas dizem que a coisa mais bela do universo são as galáxias, isso porque não conhecem você.')
+        elif rodar == 15:
+            await channel.send('A lua prometeu brilhar até que o sol se apagasse. Então eu prometo viver até que você dê seu último suspiro.')
+        elif rodar == 16:
+            await channel.send('Está vendo as estrelas do céu? Cada uma delas é equivalente as vezes que eu pensei em você antes de dormir.')
+        elif rodar == 17:
+            await channel.send('Minha filha vc não é bonita, vc é gostosa, linda, gata, cremosa, magnífica, esplêndida, atraente, calorosa, deslumbrante, iluminada, cheirosa, encantadora, simpática, querida, talentosa, seduzente, perfeita, estudiosa, amorosa, atenciosa, empenhada, reluzente, fofa e pudinzinho.')
+        elif rodar == 18:
+            await channel.send('Nossa que tipo de obra renascentista é você? A beleza do seu realismo e o poder dramático dos seus traços te transformam em uma arte tão magnífica, que mesmo se fosse estudada por milhares de críticos e acadêmicos, nunca seria compreendida! Pois é espetacular demais para esse mundo')
+        elif rodar == 19:
+            await channel.send('No seu olhar eu vejo as estrelas que Van Gogh tanto falava.')
+        elif rodar == 20:
+            await channel.send('Você está cheia de beleza cósmica que transcende todo o tempo. Nenhum conhecimento de astrofísica seria capaz de explicar o raro fenômeno que você é.')
     
-    elif content == '-ideia1' and channel.name == '꒰💡꒱-ideias-desenhos':
-        ideias1 = ['Desenha uma árvore', 'Desenha um espantalho', 'Desenha o Finn', 'Desenha o Jake', 'Desenha a Marceline',
-        'Desenha o BMO', 'Desenha o Rei Gelado']
-        r1 = random.choice(ideias1)
-        await channel.send(r1)
+    
+    
 
+    #HELP COMANDOS:
+    elif content == '-comandos':
 
-    elif content == '-ideia2' and channel.name == '꒰💡꒱-ideias-desenhos':
-        ideias2 = ['Desenha a Princesa de Fogo', 'Desenha o Finn e o Jake juntos', 'Desenha eu e a Marceline',
-        'Desenha o Lich']
-        r2 = random.choice(ideias2)
-        await channel.send(r2)
-
-
-    elif content == '-ideia3' and channel.name == '꒰💡꒱-ideias-desenhos':
-        ideias3 = ['Faça uma caricatura de si mesmo(a)', 'Desenhe espelhos de diferentes ângulos',
-        'Rascunhe você de super-heroína/super-herói', 'Tente desenhar a si mesmo(a) com o dobro da idade',
-        'Rabisque um autorretrato no reflexo de uma colher', 'Ilustre a vista de uma janela',
-        'Esboce as nuvens', 'Aproveite a perspectiva e trace a visão de cima de uma ponte ou de baixo de um penhasco',
-        'Desenhe um objeto e, em seguida, coloque um rosto nele', 'Crie uma capa alternativa para seu livro ou álbum preferido',
-        'Retrate uma cena para sua música favorita', 'Dê um rosto para o personagem de um livro que você ama',
-        'Ilustre seu conto de fadas dos sonhos', 'Combine formas de animais e faça uma criatura mítica',
-        'Transforme a cena de um sonho em um desenho', 'Crie sua própria logomarca', 'Desenhe todas as refeições que fizer ao logo da semana',
-        'Escolha um objeto e o desenhe de formas diferentes por sete dias', 'Desenhe sapatos velhos',
-        'Desenhe um copo de água', 'Desenhe uma cena em um restaurante', 'Desenhe garrafas de vinho',
-        'Desenhe o seu animal de estimação favorito', 'Desenhe o rosto de uma pessoa idosa', 'Desenhe um carro velho',
-        'Desenhe qualquer coisa feita de metal']
-        r3 = random.choice(ideias3)
-
-        await channel.send(r3)
-        
-
-
+        await channel.send('Em qualquer outro canal digite esses comandos: `-jujuba`, `bom dia, jujuba` ')
+    
 
 
 @client.event
 async def on_member_join(member):
-    channel = client.get_channel( )
+    channel = client.get_channel(831000889178849313)   #id do canal
     await channel.send(f'Bem-vindo, {member.mention}!')
 
 
 
 
-client.run(' ')
+client.run(' ') #token
